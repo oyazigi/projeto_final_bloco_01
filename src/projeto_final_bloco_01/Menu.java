@@ -1,12 +1,16 @@
 package projeto_final_bloco_01;
 import java.util.InputMismatchException;
+
 import java.util.Scanner;
 
 import projeto_final_bloco_01.util.Cores;
+import projeto_final_bloco_01.model.Sorvete;
 
 public class Menu {
 
     public static void main(String[] args) {
+    	Sorvete teste = new Sorvete("Chocolate",15,100,500,"Pequeno(300ML)");
+    	teste.visualizar();
         mostrarMenu();
     }
 
