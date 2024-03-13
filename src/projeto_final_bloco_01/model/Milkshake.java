@@ -1,12 +1,12 @@
 package projeto_final_bloco_01.model;
-
+import projeto_final_bloco_01.controller.SorveteController;
 import projeto_final_bloco_01.util.Cores;
 
 public class Milkshake extends Sorvete {
 	private String calda;
 	private String recheio;
-	public Milkshake(String sabor, int preco, int quantidadeEstoque, int calorias, String tamanho, String calda, String recheio) {
-		super(sabor, preco, quantidadeEstoque, calorias, tamanho);
+	public Milkshake(int id, String sabor, int preco, int quantidadeEstoque, int calorias, String tamanho, String calda, String recheio) {
+		super(id, sabor, preco, quantidadeEstoque, calorias, tamanho);
 		this.calda = calda;
 		this.recheio = recheio;
 	}
@@ -18,7 +18,7 @@ public class Milkshake extends Sorvete {
 	}
 	public String getRecheio() {
 		return recheio;
-	}
+	}	
 	public void setRecheio(String recheio) {
 		this.recheio = recheio;
 	}

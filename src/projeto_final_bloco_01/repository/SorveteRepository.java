@@ -4,10 +4,10 @@ import projeto_final_bloco_01.model.Sorvete;
 
 public interface SorveteRepository {
 	
-	public void procurarPorNumero(int numero);
+	public void procurarPorNumero(int id, int tipo);
 	public void listarTodos();
 	public void cadastrarSorvete(Sorvete sorvete);
 	public void atualizarSorvete(Sorvete sorvete);
-	public void deletarSorvete(int numero); 
+	public void deletarSorvete(int id); 
 	
 }

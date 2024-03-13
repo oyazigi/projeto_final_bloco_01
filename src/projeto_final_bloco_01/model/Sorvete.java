@@ -1,14 +1,17 @@
 package projeto_final_bloco_01.model;
 import projeto_final_bloco_01.util.Cores;
+import projeto_final_bloco_01.controller.SorveteController;
 public abstract class Sorvete {
 	
 	private String sabor;
+	private int id;
 	private int preco;
 	private int quantidadeEstoque;
 	private int calorias;
 	private String tamanho;
 
-	public Sorvete(String sabor, int preco, int quantidadeEstoque, int calorias, String tamanho) {
+	public Sorvete(int id, String sabor, int preco, int quantidadeEstoque, int calorias, String tamanho) {
+		this.id = SorveteController.gerarNumero();
 		this.sabor = sabor;
 		this.preco = preco;
 		this.quantidadeEstoque = quantidadeEstoque;
@@ -24,7 +27,12 @@ public abstract class Sorvete {
     public int getPreco() {
         return preco;
     }
+    
+    public int getId() {
+        return id;
+    }
 
+    
     public int getQuantidadeEstoque() {
         return quantidadeEstoque;
     }
@@ -40,6 +48,10 @@ public abstract class Sorvete {
     // Setters
     public void setSabor(String sabor) {
         this.sabor = sabor;
+    }
+    
+    public void setId(int id) {
+    	this.id = id;
     }
 
     public void setPreco(int preco) {
