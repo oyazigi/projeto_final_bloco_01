@@ -1,6 +1,6 @@
 package projeto_final_bloco_01.model;
 import projeto_final_bloco_01.util.Cores;
-public class Sorvete {
+public abstract class Sorvete {
 	
 	private String sabor;
 	private int preco;
@@ -59,22 +59,15 @@ public class Sorvete {
     }
 
 	
-		/*public boolean Sacar(float valor) {
-			if(this.getSaldo() < valor) {
-				System.out.println("Saldo insuficiente!");
-				return false;
-			}
-			else {
-				this.setSaldo(this.getSaldo() - valor);
-				System.out.printf("Saque realizado com sucesso!\nNovo saldo: %f\n", this.getSaldo());
+		public boolean colocarNaCasquinha(Sorvete sorvete) {
+				System.out.printf("Colocamos com sucesso o sorvete de: %s na casquinha!", sorvete.getSabor());
 				return true;
-			}
 		}
-		
-		public void Depositar(float valor) {
-			this.setSaldo(this.getSaldo() + valor);
-			System.out.printf("Deposito realizado com sucesso!\nNovo saldo: %f\n", this.getSaldo());
-		}*/
+	
+		public void adicionarAoEstoque(Sorvete sorvete, int quantidade) {
+			sorvete.setQuantidadeEstoque(sorvete.getQuantidadeEstoque() + quantidade);
+			System.out.printf("Adicionamos com sucesso %d sorvetes de %s ao estoque! quantidade atualizada: %d", quantidade, sorvete.getSabor(), sorvete.getQuantidadeEstoque());
+		}
 		
 		public void visualizar() {
 			System.out.println(Cores.TEXT_GREEN +
