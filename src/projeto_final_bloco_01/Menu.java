@@ -1,8 +1,11 @@
 package projeto_final_bloco_01;
 import java.util.InputMismatchException;
 
+
 import java.util.Scanner;
 
+import projeto_final_bloco_01.controller.SorveteController;
+import projeto_final_bloco_01.model.Milkshake;
 import projeto_final_bloco_01.util.Cores;
 import projeto_final_bloco_01.model.Sorvete;
 
@@ -22,6 +25,10 @@ public class Menu {
     }
     public static void digitarOpcao() {
     	int op = 0;
+		int preco, quantidadeEstoque, calorias;
+		String sabor, tamanho, calda;
+		Scanner leia = new Scanner(System.in);
+		SorveteController sorvetes = new SorveteController();
         Scanner scan = new Scanner(System.in);
         try{op = scan.nextInt();}
         catch(InputMismatchException e) {System.out.println("Tipo de dado inválido, favor digitar novamente"); digitarOpcao();} 
